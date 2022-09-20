@@ -7,3 +7,15 @@ metadata:
     env: demo
     region: north
     tier: back
+spec:
+  containers:
+  - image: busybox:latest
+    name: busy
+    imagePullPolicy: IfNotPresent
+    env: 
+      - name: os
+        value: "ubuntu"
+    command:
+      - /bin/echo
+    args:
+      - "$(os), $(debug)"
