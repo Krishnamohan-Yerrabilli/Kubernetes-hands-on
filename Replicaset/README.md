@@ -10,7 +10,6 @@
 - How to delete replicaset?
 - How to delete replicaset without deleting pods
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3iysuwnqb9a8b8wksdsa.gif)
 ### What is a Replicaset?
 
 A Replicaset simply means, it replicates pods, like you can have an n number of pods, 1 replica means it controls one pod, under the hood of a replica set the main important concept labels, let's see in detail what it is all about, and explore what exactly replicates means, use-cases and many more...
