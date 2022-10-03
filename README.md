@@ -60,9 +60,10 @@ which provide by the node and the etcd, and check whether the given state is equ
 the current state, if it does not satisfy the desired state then the control manager restarts a 
 new pod, by using different types of controllers. 
 
-There are 4 types of controllers beyond the control manager
+There are lot of types of controllers beyond the control manager some of the important one's are
 
 - Node controller
+- Deployment controller
 - Replication controller
 - Endpoint controller
 - Service-token controller
