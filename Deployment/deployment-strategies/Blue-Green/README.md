@@ -9,6 +9,7 @@ To start this, we set up a service that sits in front of deployments.
 For example, the service selector section of the manifest file for a 
 blue deployment for an app called web-app with v1.0.0 looks like this:
 
+```
 Type: Service
 Metadata:
  Name: web-app-01
@@ -17,8 +18,11 @@ Metadata:
 Selector:
    App: Web-app
    Version: v1.0.0
+```
+
 And the deployment for Blue Web App:
 
+```
 Type: Expansion
 Metadata:
   Name: web-app-01
@@ -28,10 +32,12 @@ Specification:
            Labels:
              App: Web-app
              Version: "v1.0.0"
+```
 
 When we want to redirect traffic to the new (green) 
 version of the app, we update the manifest to point to the new version v2.0.0.
 
+```
 Type: Service
 Metadata:
  Name: web-app-02
@@ -40,8 +46,11 @@ Metadata:
 Selector:
    App: Web-app
    Version: v2.0.0
+```
+
 Expansion for Green App:
 
+```
 Type: Expansion
 Metadata:
   Name: web-app-02
@@ -51,3 +60,4 @@ Specification:
            Labels:
              App: Web-app
              Version: "v2.0.0"
+```
