@@ -1,9 +1,6 @@
-![Untitled design (2)](https://user-images.githubusercontent.com/58173938/193967528-5f64dc54-4713-46b1-b472-fb1f275031e2.png)
-
-
 ## Introduction
 
-A blue/green deployment involves deploying the new application version (green) beside with the old (blue).
+A blue/green deployment involves deploying the new application version (green) alongside the old (blue).
 
 A load balancer in the form of a Service Selector object is used to test and redirect traffic to
 the new application (green) instead of the old one when verified.
@@ -13,9 +10,7 @@ amount of application resources for the duration of the deployment.
 
 To start this, we set up a service that sits in front of deployments.
 
-For example, the service selector section of the manifest file for a blue deployment 
-for an app called web-app with v1.0.0 looks like this:
-
+For example, the service selector section of the manifest file for a blue deployment for an app called web-app with v1.0.0 looks like this:
 ```
 Type: Service
 Metadata:
@@ -67,4 +62,4 @@ Specification:
              Version: "v2.0.0"
 ```
 
-Thank you for reading my blog. If you like my work feel free to connect me on -> <a target = "_blank" href= "https://www.linkedin.com/in/krishnamohanyerrabilli"> LinkedIn </a> or <a target = "_blank" href= "https://www.twitter.com/K_Mohan_">Twitter</a>, see you with another one guys.  
+Thank you for reading my blog. If you like my work feel free to connect me on <a target = "_blank" href= "https://www.linkedin.com/in/krishnamohanyerrabilli"> LinkedIn </a> or <a target = "_blank" href= "https://www.twitter.com/K_Mohan_">Twitter</a>, see you with another one guys.  
