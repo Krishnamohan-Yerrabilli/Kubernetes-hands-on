@@ -1,12 +1,3 @@
-Kubernetes is becoming increasingly popular among developers as an orchestration platform.
-The Kubernetes platform has changed the entire application development and cloud networking
-landscape. Naturally, the popularity of Kubernetes deployments is growing exponentially.
-
-Kubernetes deployments are required to develop applications and run servers using Kubernetes.
-In any case, it can be difficult for a novice developer to learn about Kubernetes deployments. 
-If you don't have enough knowledge about Kubernetes deployments, you might not be able to make 
-the most of them. This article gives you a brief overview of Kubernetes deployments.
-
 ## Kubernetes deployments:
 
 Kubernetes deployments provide information about the characteristics of a particular application 
