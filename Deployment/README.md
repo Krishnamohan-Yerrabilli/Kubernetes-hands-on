@@ -1,107 +1,61 @@
 ## Kubernetes deployments:
 
-Kubernetes deployments provide information about the characteristics of a particular application 
-or server to the orchestration operating system. More specifically, Kubernetes deployments enable 
-developers to create or manage containerized applications. Kubernetes deployments serve as pointers 
-to how Kubernetes servers should deploy and develop pods.
 
-## Why should you use Kubernetes deployments?
+Kubernetes deployments provide information about the characteristics of a particular application or server to the orchestration operating system.  Kubernetes deployments serve as pointers to how Kubernetes servers should deploy and develop pods.
 
-Needless to mention, developing applications is very risky when you are not using a 
-stable and compatible platform. With a stable orchestration platform like Kubernetes, 
-application development becomes more effortless. Without Kubernetes deployments, it is 
-impossible to release updates and moderations for applications. 
+### Why should we use Kubernetes deployments?
 
-In Kubernetes applications, small changes and transformations are required to improve 
-customer satisfaction. Implementing small and less important changes repeatedly can be a 
-challenge for developers. Through Kubernetes deployments, you can make small and simple 
-changes to your Kubernetes applications.
+Developing applications is very risky when you are not using a stable and compatible platform. With a stable orchestration platform like Kubernetes, application development becomes more effortless. 
 
-Once you start using Kubernetes deployments, you will rarely experience connectivity 
-failures and server downtimes. With Kubernetes deployments, it is possible to consistently 
-and effectively monitor server health. Kubernetes deployments make scaling and running 
-containerized applications seamless and effortless.
+In Kubernetes applications, small changes and transformations are required to improve customer satisfaction. Implementing small and less important changes repeatedly can be a challenge for developers. Through Kubernetes deployments, you can make small and simple changes to your Kubernetes applications.
 
-Most of the Kubernetes functions are automated, k8s automated tasks depend on the Kubernetes 
-deployment. Deploying pods into Kubernetes clusters can also be automated and you don't have 
-to worry about deploying pods on time.  
+Once you start using Kubernetes deployments, you will rarely experience connectivity failures and server downtimes. With Kubernetes deployments, it is possible to consistently and effectively monitor server health. Kubernetes deployments make scaling and running containerized applications seamless and effortless.
 
-Manual deployments are often time-consuming and tedious, while automated deployments are 
-more error-free and faster.
+Most of the Kubernetes functions are automated, k8s automated tasks depend on the Kubernetes deployment. Deploying pods into Kubernetes clusters can also be automated and you don't have to worry about deploying pods on time.
 
-On top of all of the above, Kubernetes deployments ensure that your pods are 
-running successfully. Furthermore, Kubernetes deployments ensure that your pods 
-and deployments are running on Kubernetes nodes.
+Manual deployments are often time-consuming and tedious, while automated deployments are more error-free and faster.
 
-These are the advantages you can get when you use Kubernetes deployments 
-to manage application development.
+On top of all of the above, Kubernetes deployments ensure that your pods are running successfully. Furthermore, Kubernetes deployments ensure that your pods and deployments are running on Kubernetes nodes.
 
-## Use cases for Kubernetes deployments
+These are the advantages you can get when you use Kubernetes deployments to manage application development.
 
-Kubernetes extensions are often used by developers to expose new states of Kubernetes pods. 
-Updating 
+### Use cases:
 
-PodTemplateSec allows you to update the new states of your existing pods with Kubernetes 
-deployments. 
+Kubernetes extensions are often used by developers to expose new states of Kubernetes pods. Updating
+
+PodTemplateSec allows you to update the new states of your existing pods with Kubernetes deployments.
+
+This process revolves around transferring pods from an existing replicaset to the created replicaset. Each time you create a new ReplicaSet, the ReplicaSet comes with updated versions of the pods.
+
+Kubernetes deployments are used for new replicaset roles. Pods are generated as background tasks when a new replicaset is created.
+
+Many Kubernetes deployments handle redundant workloads in Kubernetes clusters. Furthermore, Kubernetes deployments allow you to switch back to previous versions whenever you want.
+
+You can also delete replicasets using Kubernetes deployments.
 
 
-This process revolves around transferring pods from an existing replicaset to the created 
-replicaset. Each time you create a new ReplicaSet, the ReplicaSet comes with updated versions of the pods.
+Additionally, PodTemplateSec issues that arise when you pause deployment in your Kubernetes cluster can be easily resolved with the help of Kubernetes Deployment.
 
-Kubernetes deployments are used for new replicaset roles. 
-Pods are generated as background tasks when a new replicaset is created.
+You have the opportunity to track the progress of the application development process that you started with deployments.
 
-Many Kubernetes deployments handle redundant workloads in Kubernetes 
-clusters. Furthermore, Kubernetes deployments allow you to switch back to 
-previous versions whenever you want.
+In short, Kubernetes deployments can greatly improve your user experience and help you use your pods and containers efficiently.
 
-You can also delete obsolete replicasets using Kubernetes deployments. 
 
-With the help of Kubernetes deployment, you can easily clean them and thus 
-increase the performance of Kubernetes clusters.
 
-Additionally, PodTemplateSec issues that arise when you pause deployment 
-in your Kubernetes cluster can be easily resolved with the help of Kubernetes Deployment. 
+### A recreated strategy
 
-You have the opportunity to track the progress of the application development 
-process that you started with deployments.
+This deployment method involves replacing existing pods with new pods. In this strategy, you must delete the old pods in your Kubernetes cluster before deploying the new ones.
 
-In short, Kubernetes deployments can greatly improve your user experience 
-and help you use your pods and containers efficiently. 
+You can deploy new pods and run them immediately after deleting old pods. When you choose this deployment strategy, you cannot run old pods and new pods simultaneously in your Kubernetes cluster.
 
-Expansion Strategies You Should Know Multiple deployment strategies are currently 
-in practice. 
+### Blue/green strategy
 
-This deployment strategy works best when it comes to Kubernetes because the orchestration 
-platform keeps old pods for a limited period even after new pods are launched into clusters. 
+This deployment strategy is the exact opposite of the reinvented deployment strategy. In this manner, you can deploy new pods into your cluster when your cluster has old and outdated pods. Due to this unique feature, this deployment strategy is friendly to switch back to old pods if you face any discomfort with the newly deployed pods.
 
-If you're concerned about running stateful applications, there's no better strategy than ramped deployment.
+These Kubernetes deployment strategies are widely used to deploy, monitor, or customize Kubernetes pods. Apart from these, Canary deployment and A/B testing deployment strategies are also practiced.
 
-### A recreated expansion
+### Canary strategy
 
-This deployment method involves replacing existing pods with new pods. In this strategy, 
-you must delete the old pods in your Kubernetes cluster before deploying the new ones. 
+Canary deployment is used to allow a subset of users to test a new version of an application or when you are not completely confident in the new version's functionality.
 
-You can deploy new pods and run them immediately after deleting old pods. When you choose 
-this deployment strategy, you cannot run old pods and new pods simultaneously in your Kubernetes cluster.
-
-### Blue/green expansion
-
-This deployment strategy is the exact opposite of the reinvented deployment strategy. 
-In this manner, you can deploy new pods into your cluster when your cluster has old and 
-outdated pods. Due to this unique feature, this deployment strategy is friendly to switch 
-back to old pods if you face any discomfort with the newly deployed pods.
-
-These Kubernetes deployment strategies are widely used to deploy, 
-monitor, or customize Kubernetes pods. Apart from these, Canary deployment 
-and A/B testing deployment strategies are also practiced. 
-
-### Canary expansions
-
-Canary deployment is used to allow a subset of users to test a new version of an application or 
-when you are not completely confident in the new version's functionality. 
-
-This involves running the new version of the application alongside the old version
-with the old version of the application serving a large number of users and the new 
-version serving a small group of test users. If the new expansion is successful it 
-will be rolled out to more users.
+This involves running the new version of the application alongside the old version with the old version of the application serving a large number of users and the new version serving a small group of test users. If the new strategy is successful it will be rolled out to more users.
