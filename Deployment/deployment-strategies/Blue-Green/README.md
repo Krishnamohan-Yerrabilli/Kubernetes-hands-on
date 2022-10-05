@@ -62,4 +62,4 @@ Specification:
              Version: "v2.0.0"
 ```
 
-Thank you for reading my blog. If you like my work feel free to connect me on <a target = "_blank" href= "https://www.linkedin.com/in/krishnamohanyerrabilli"> LinkedIn </a> or <a target = "_blank" href= "https://www.twitter.com/K_Mohan_">Twitter</a>, see you with another one guys.  
+
