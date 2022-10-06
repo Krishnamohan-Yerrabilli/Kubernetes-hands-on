@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service 
+meatadata: 
+  name: Kubernetes-hands-on
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+      
