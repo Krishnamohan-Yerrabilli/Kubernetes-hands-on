@@ -183,4 +183,3 @@ Intra-Pod Communication: Containers use a shared Local Host interface. All the c
 
 <p>
 
-Thank you for reading my blog. Feel free to connect on <a target = "_blank" href= "https://www.linkedin.com/in/krishnamohanyerrabilli"> LinkedIn </a> or <a target = "_blank" href= "https://www.twitter.com/K_Mohan_">Twitter</a>. 😊
