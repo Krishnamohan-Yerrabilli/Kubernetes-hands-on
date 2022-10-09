@@ -90,7 +90,7 @@ Step 7: Deploy a demo application and test it
 ```
 
 Once that is set, run the following command to set up a demo 
-(replace the [DNS_NAME] with your record, e.g. www.bio.link/krishnamse)
+(replace the [DNS_NAME] with your record)
 
 Note that you must set up a DNS record, this step will not work 
 with an IP address.
@@ -181,6 +181,10 @@ ingress.networking.k8s.io/hw-ingress created
 ingress.networking.k8s.io/hw-ingress-static created
 
 ```
-Now check the static IP that you received and paste it on any browser
+Now check the static IP that you received and paste it on browser
+![Azure-ingress-application-routing](https://user-images.githubusercontent.com/58173938/194750870-400d618e-af80-43fd-a330-c6ba0e9d413a.png)
+
+
+Tada Congratulations you successfully setup and created a working Nginx-ingressC :)
 
 Hope it helps 
