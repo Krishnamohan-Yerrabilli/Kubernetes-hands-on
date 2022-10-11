@@ -103,7 +103,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: jump-pod
+  name: jump
   namespace: dev
     
 spec:
