@@ -32,10 +32,6 @@ spec:
       containers:
       - name: testing-ctr
         image: nginx
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         ports:
         - containerPort: 8080
  
@@ -61,10 +57,6 @@ spec:
       containers:
       - name: testing-ctr
         image: nginx
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         ports:
         - containerPort: 8080
 
@@ -111,10 +103,6 @@ spec:
   containers:
   - name: jump
     image: ubuntu:latest
-    resources:
-      limits:
-        memory: "128Mi"
-        cpu: "500m"
-        # below two are same as saying that "exec -it"
+    # below two are same as saying that "exec -it"
     tty: true
     stdin: true
