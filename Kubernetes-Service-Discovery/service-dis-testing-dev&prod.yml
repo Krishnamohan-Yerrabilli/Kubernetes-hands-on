@@ -117,5 +117,4 @@ spec:
         cpu: "500m"
         # below two are same as saying that "exec -it"
     tty: true
-    stdin: true  
-  
+    stdin: true
