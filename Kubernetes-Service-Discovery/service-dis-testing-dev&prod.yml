@@ -71,8 +71,7 @@ spec:
   selector:
     app: testing
   ports:
-  - port: 80
-    targetPort: 8080
+  - port: 8080
   type: ClusterIP
 
 ---
@@ -86,8 +85,7 @@ spec:
   selector:
     app: testing
   ports:
-  - port: 80
-    targetPort: 8080
+  - port: 8080
   type: ClusterIP
 
 ---
