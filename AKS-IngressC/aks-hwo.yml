@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: aks-helloworld-one
-        image: mcr.microsoft.com/azuredocs/aks-helloworld:v1
+        image: mcr.microsoft.com/azuredocs/aks-helloworld:v1 #(this image is pulled from Azure Container Registry)
         ports:
         - containerPort: 80
         env:
