@@ -33,6 +33,8 @@ In simple terms, a resource is a collection of objects for that specific resourc
 
 Let's see what are the different resources available, there is a command for this
 
+`Note`: This resources are not constant there are maybe changed, remove,or added new resources for every new release
+
 ``` 
 kubectl api-resources 
 ``` 
