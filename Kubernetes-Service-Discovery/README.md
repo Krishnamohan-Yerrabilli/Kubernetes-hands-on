@@ -6,14 +6,14 @@ Each service will get a DNS name that other microservices can use. The format of
   service-name.namespace.svc.cluster.local
 
 
-  apiVersion: v1
-  kind: Service
+  apiVersion: v1  #This versions description may change for the type of the resource you used 
+  kind: Service   #Object you are going to use 
   metadata:
-  name: testing <- this name is registered with the cluster DNS
-  spec:
-  selector:
-  app: web
-  ports:
+    name: testing <- this name is registered with the cluster DNS
+  spec: # This is where you define the properties of the properties (which is also called as you desire state even your are using a pod, deployment..)
+    selector:
+      app:web
+    ports:
 
 ```
 By default, Kubernetes creates a service of type clusterIP. We can create different types of services <br>
