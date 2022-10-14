@@ -1,6 +1,8 @@
 # Kubernetes-hands-on
-This repo consists of Config files and also covers Different concepts in Kubernetes 
 
+This repo consists of all my learnings that cover Different concepts, configurations, 
+and many more related to Kubernetes, I explain different concepts in detail with practical 
+exposure, feel free to fork, if you like my work leave a ⭐
 
 ## What is Kubernetes?
 
