@@ -1,5 +1,5 @@
-Before we work with K8s PV, some things to be noted
-let's see what they are
+# Before we work with K8s PV, some things to be noted
+## let's see what they are
 
 Container: 
 
@@ -32,8 +32,65 @@ So what makes containers different to other processes:
      - it loses the file system,  and the file system gets recreated against of files on lost 
      - therefore the container file system is not persisted during restarts
 
-Let's see real world example, of how this thing works
+# Let's see real world example, of how this thing works
 
-Let's play with docker volumes:
+## Let's play with docker volumes:
 
-I will update...
+### below commands
+
+```
+
+-d    -> Detach mode (no auto-logged into the running container)
+--rm  -> when we logged out of from the running container it will automatically stop the container too 
+-e    -> env (imperative way)
+exec  -> execute a file
+it    -> interactive env, we can able to perform operations inside the running container
+bash  -> shell environment
+
+```
+# Practise example by using Postgresdb
+```
+
+~ docker run -d --rm -e POSTGRES_DB=postgresdb -e POSTGRES_USER=mohan -e POSTGRES_PASSWORD=mohan123 postgres:15.0
+df34bea9bbcae7297fe59f2de4a30f4459905d4dcd5218e7161253d83761af5b
+
+
+~ docker exec -it df34bea9bbcae7297fe59f2de4a30f4459905d4dcd5218e7161253d83761af5b bash
+root@df34bea9bbca:/# psql --username=mohan postgresdb
+psql (15.0 (Debian 15.0-1.pgdg110+1))
+Type "help" for help.
+
+postgresdb=# CREATE TABLE COMPANY(
+   ID INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+);
+CREATE TABLE
+postgresdb=# \d
+        List of relations
+ Schema |  Name   | Type  | Owner 
+--------+---------+-------+-------
+ public | company | table | mohan
+(1 row)
+
+postgresdb=# CREATE TABLE DEP_MEM(
+   ID INT PRIMARY KEY     NOT NULL,
+   NAME           TEXT    NOT NULL,
+   AGE            INT     NOT NULL,
+   ADDRESS        CHAR(50),
+   SALARY         REAL
+);
+CREATE TABLE
+
+postgresdb=# \d
+        List of relations
+ Schema |  Name   | Type  | Owner 
+--------+---------+-------+-------
+ public | company | table | mohan
+ public | dep_mem | table | mohan
+(2 rows)
+
+
+```
