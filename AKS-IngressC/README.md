@@ -181,9 +181,9 @@ ingress.networking.k8s.io/hw-ingress created
 ingress.networking.k8s.io/hw-ingress-static created
 
 ```
-Now check the static IP that you received and paste it on browser
-![Azure-ingress-application-routing](https://user-images.githubusercontent.com/58173938/194750870-400d618e-af80-43fd-a330-c6ba0e9d413a.png)
+Now check the static IP that you received and!paste it on browser
 
+[azure-ingress-application-routing](https://user-images.githubusercontent.com/58173938/196035205-08c2fcd4-b093-44ca-b0f6-38f7b1a13103.png)
 
 Tada Congratulations you successfully setup and created a working Nginx-ingressC :)
 
