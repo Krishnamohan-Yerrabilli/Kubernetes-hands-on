@@ -1,29 +1,29 @@
 # Before we work with K8s PV, some things to be noted
 ## let's see what they are
 
-Container: 
+### Container: 
 
      - The container is just a running process
      - Container is ephemeral
      - when creating a container, Linux will assign a temporary file system, 
      - which is related to Linux namespaces, capabilities
 
-State:
+### State:
 
      - The state is normally just some form of data that our application needs to function
      - a container or pod or an application is just a running process, there are two types of process
 
-Stateless:
+### Stateless:
 
      - A stateless process is a process that does depend on state or data to function 
      - It does not store any state or data in memory(main) or the filesystem(secondary)
 
-Stateful:
+### Stateful:
 
      - The stateful process depends on the state to function, which will store in only two places
      - One is in memory and the other is on disk memory allows access to your data
 
-So what makes containers different to other processes:
+### So what makes containers different to other processes:
 
      - A container usually has its own file system when docker creates a container
      - it creates a virtual file system and attaches it to that container unlike processes 
@@ -92,7 +92,10 @@ postgresdb=# \d
  public | dep_mem | table | mohan
 (2 rows)
 
+postgresdb=# \q
 
 ```
 
-Still needs to update...
+Restarting the above container and going back in you will notice \d commands does not return tables. Since data is lost.
+
+## Same can be demonstrated using Kubernetes
