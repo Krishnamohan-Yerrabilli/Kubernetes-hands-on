@@ -60,39 +60,46 @@ root@df34bea9bbca:/# psql --username=mohan postgresdb
 psql (15.0 (Debian 15.0-1.pgdg110+1))
 Type "help" for help.
 
-postgresdb=# CREATE TABLE COMPANY(
+postgresdb=# 
+
+CREATE TABLE COMPANY(                  #adding 1st table
    ID INT PRIMARY KEY     NOT NULL,
    NAME           TEXT    NOT NULL,
    AGE            INT     NOT NULL,
    ADDRESS        CHAR(50),
    SALARY         REAL
 );
+
 CREATE TABLE
-postgresdb=# \d
+
+postgresdb=# \d                               
         List of relations
  Schema |  Name   | Type  | Owner 
 --------+---------+-------+-------
- public | company | table | mohan
+ public | company | table | mohan     #showing only 1 row
 (1 row)
 
-postgresdb=# CREATE TABLE DEP_MEM(
+postgresdb=# 
+
+CREATE TABLE DEP_MEM(               #Creating 2nd one
    ID INT PRIMARY KEY     NOT NULL,
    NAME           TEXT    NOT NULL,
    AGE            INT     NOT NULL,
    ADDRESS        CHAR(50),
    SALARY         REAL
 );
+
 CREATE TABLE
 
-postgresdb=# \d
+postgresdb=# \d                  
         List of relations
  Schema |  Name   | Type  | Owner 
 --------+---------+-------+-------
- public | company | table | mohan
- public | dep_mem | table | mohan
+ public | company | table | mohan       # showing both but when we restart this without attaching volumes
+ public | dep_mem | table | mohan       # something bad happen which is the data will be lost
 (2 rows)
 
-postgresdb=# \q
+postgresdb=# \q 
 
 ```
 
