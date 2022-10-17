@@ -106,3 +106,5 @@ postgresdb=# \q
 Restarting the above container and going back in you will notice \d commands does not return tables. Since data is lost.
 
 ## Same can be demonstrated using Kubernetes
+
+![namespace](https://user-images.githubusercontent.com/58173938/196079761-4e86e8e2-9591-4962-aff9-94d62d2c6d3d.png)
