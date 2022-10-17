@@ -109,8 +109,9 @@ Restarting the above container and going back in you will notice \d commands doe
 
 ![namespace](https://user-images.githubusercontent.com/58173938/196079761-4e86e8e2-9591-4962-aff9-94d62d2c6d3d.png)
 
-# run the same above mentioned commands to create and list the database table
-
+### run the same above mentioned commands to create and list the database table
+```
 ~ kubectl delete pod postgres-0
+```
 
-# exec back in and confirm table does not exist.
+exec back in and confirm table does not exist.
