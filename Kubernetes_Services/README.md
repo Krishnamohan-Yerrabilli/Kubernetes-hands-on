@@ -29,22 +29,22 @@ The core components of a Kubernetes service are:
 
 ## Different types of Kubernetes services
 
-### ClusterIP Service: 
+#### ClusterIP Service: 
 
 The default type of service used to expose a service on an IP address in a cluster. <br>
 Access is usually allowed within the cluster.
 
-### NodePort Service: 
+#### NodePort Service: 
 
 A nodeport opens ports that help route any traffic arriving at a nodeport to a service. <br>
 It is considered the foundation for other techniques such as load balancers.
 
-### ExternalName Service: 
+#### ExternalName Service: 
 
 The ExternalName service returns a CNAME record and contains the value defined in ExternalName. <br>
 Therefore, it cannot be accessed by the cluster IP address.
 
-### Load Balancer Service: 
+#### Load Balancer Service: 
 
 A load balancer service provides the equivalent of a clusterIP service and extends it to an <br>
 external load balancer specific to the cloud provider. This is helpful for clusters running <br>
@@ -52,9 +52,9 @@ on public cloud providers such as AWS or Azure.
 
 ## How does a Kubernetes service work? 
 
-In Kubernetes, each pod has an IP address. A pod can communicate with another pod 
+In Kubernetes, each pod has an IP address. A pod can communicate with another pod <br>
 by directly addressing its IP address, but using services is the recommended way.
 
 A service is a set of pods that can be reached by a single, fixed DNS name or IP address.
 
-I hope you learnt something, happy learning :)
+I hope you learnt something, happy learning guys :)
