@@ -6,8 +6,8 @@ metadata:
     app: postgres
 data:
   POSTGRES_DB: postgresdb
-  POSTGRES_USER: admin
-  POSTGRES_PASSWORD: admin123
+  POSTGRES_USER: mohan
+  POSTGRES_PASSWORD: mohan123
 ---
 apiVersion: apps/v1
 kind: StatefulSet
