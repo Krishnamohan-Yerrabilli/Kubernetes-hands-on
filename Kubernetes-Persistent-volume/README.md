@@ -138,3 +138,14 @@ Note: Whereas PVC are bound to namespaces
 ~ kubectl get pods
 
 ```
+
+
+Workflow: 
+
+-> Provisiong storage type on cloud (AWS, AZURE, GCP) Administrator
+-> Kubernetes Administrator provision (persistent volume with storageclas(This is simply a plugin nothing more checkout (CSI))
+-> The storageclass will be declared in Persistent volume (cluster bound)
+-> Set up PVC on the cluster for to be used by the pods (namespace bound)
+-> create an db and attach the db(pod) to the pvc 
+
+This is what actually going on.
