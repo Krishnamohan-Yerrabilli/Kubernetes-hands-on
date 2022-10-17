@@ -115,3 +115,26 @@ Restarting the above container and going back in you will notice \d commands doe
 ```
 
 exec back in and confirm table does not exist.
+
+
+volumes are not bound by namespaces meaning your administrators or your platform engineers that creates this 
+persistent volume can create it for the cluster wide so it's not allocated for a specific namespace that means 
+pods that are running and any namespace can use a persistence volume 
+
+Note: Whereas PVC are bound to namespaces
+
+
+```
+
+~ kubens pg
+✔ Active namespace is "pg"
+
+~ kubectl apply -f PersistentV.yml
+
+~ kubectl apply -f PVC.yaml
+
+~ kubectl apply -f postgres-with-pv-conf.yml
+
+~ kubectl get pods
+
+```
