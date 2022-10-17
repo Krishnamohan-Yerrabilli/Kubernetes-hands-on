@@ -19,7 +19,7 @@ pods running at one time can be different from a group that runs later.
 
 ## Components of a Kubernetes Service
 
-Kubernetes services use selectors and labels to match pods with other applications. 
+Kubernetes services use selectors and labels to match pods with other applications.  <br>
 The core components of a Kubernetes service are:
 
 - The cluster IP address and assigned port number 
@@ -36,16 +36,25 @@ Access is usually allowed within the cluster.
 
 ### NodePort Service: 
 
-A nodeport opens ports that help route any traffic arriving at a nodeport to a service. 
+A nodeport opens ports that help route any traffic arriving at a nodeport to a service. <br>
 It is considered the foundation for other techniques such as load balancers.
 
 ### ExternalName Service: 
 
-The ExternalName service returns a CNAME record and contains the value defined in ExternalName. 
+The ExternalName service returns a CNAME record and contains the value defined in ExternalName. <br>
 Therefore, it cannot be accessed by the cluster IP address.
 
 ### Load Balancer Service: 
 
-A load balancer service provides the equivalent of a clusterIP service and extends it to an 
-external load balancer specific to the cloud provider. This is helpful for clusters running 
+A load balancer service provides the equivalent of a clusterIP service and extends it to an <br>
+external load balancer specific to the cloud provider. This is helpful for clusters running <br>
 on public cloud providers such as AWS or Azure.
+
+## How does a Kubernetes service work? 
+
+In Kubernetes, each pod has an IP address. A pod can communicate with another pod 
+by directly addressing its IP address, but using services is the recommended way.
+
+A service is a set of pods that can be reached by a single, fixed DNS name or IP address.
+
+I hope you learnt something, happy learning :)
