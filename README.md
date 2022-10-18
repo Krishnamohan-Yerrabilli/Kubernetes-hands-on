@@ -1,8 +1,19 @@
+
+<div align="center">
+  <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
+    <img src="https://user-images.githubusercontent.com/58173938/196433324-45e814cb-fb4d-4807-9134-af30e45e9ea6.png" alt="kuber" width="200" height="200">
+  </a>
+</div>
+<br>
+<div align="center">
+This repo consists of all my learnings that cover Different concepts, configurations, <br>
+and many more related to Kubernetes, I explain different concepts in detail with practical <br>
+exposure, feel free to fork, if you like my work leave a ⭐
+</div>
+
 # Kubernetes-hands-on
 
-This repo consists of all my learnings that cover Different concepts, configurations, 
-and many more related to Kubernetes, I explain different concepts in detail with practical 
-exposure, feel free to fork, if you like my work leave a ⭐
+
 
 ## What is Kubernetes?
 
