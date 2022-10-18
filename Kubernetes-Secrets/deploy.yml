@@ -4,13 +4,13 @@ kind: Deployment
 metadata:
   name: deploy-main
   labels:
-    app: deploy-1
+    app: deploy-2
     test: test
 spec:
   selector:
     matchLabels:
-      app: app-v1
-  replicas: 3
+      app: app-v2
+  replicas: 2
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -19,11 +19,11 @@ spec:
   template:
     metadata:
       labels:
-        app: app-v1
+        app: app-v2
     spec:
       containers:
       - name: example-app
-        image: mynameismohan/golang-app-readconfig:v1.0
+        image: mynameismohan/golang-app-conf-secrets
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
