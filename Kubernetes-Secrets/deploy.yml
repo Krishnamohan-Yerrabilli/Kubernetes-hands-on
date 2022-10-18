@@ -51,4 +51,4 @@ spec:
             secretName: app-v2-test-config #name of our secret object
         - name: config-volume
           configMap:
-            name: app-v1-test-config  
+            name: app-v2-test-config  
