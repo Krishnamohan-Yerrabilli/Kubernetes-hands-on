@@ -6,10 +6,10 @@
 </div>
 <br>
 <div align="center">
-This repo consists of all my learnings that cover Different concepts, configurations, <br>
-and many more related to Kubernetes, I explain different concepts in detail with practical <br>
-exposure, feel free to fork, if you like my work leave a ⭐
+This repo consists of all my learnings, I explained different concepts in detail with practical <br>
+exposure, feel free to fork, if you like my work leave a ⭐ <br>Thank you, happy learning :)
 </div>
+<br>
 
 # Kubernetes-hands-on
 
