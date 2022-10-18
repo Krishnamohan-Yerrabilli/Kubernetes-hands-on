@@ -37,7 +37,6 @@ func main() {
     
 	fmt.Println("starting...")
 	ReadConfig()
-	ReadSecret()
 	router := fasthttprouter.New()
 	router.GET("/", Response)
 	router.GET("/status", Status)
