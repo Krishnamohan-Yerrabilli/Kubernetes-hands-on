@@ -79,17 +79,16 @@ isolate secrets from other Kubernetes resources and minimize exposure.
 
 ## The workflow which I go through
 
-- Created a go application (to read config(app expecting a config) this is from application,<br> 
-  and (k8s Deployment yaml file expects a config) -> which is mounted through volume
+- Created a go application (to read config+secrets(app expecting a config and secrets) this is from application,<br> 
+  and (k8s Deployment yaml file expects a config and secrets) -> which is mounted through volume
 - Build an image out of it
 - Created ConfigMap for the test environment
-- Deploying the go application via Deployment(here ConfigMap mounted using MountPath)
-- before the deployment is successfully running the steps it goes through <br>
-   -> it will start -> read the config -> successfully load the config. (this data is stored in logs)
+- Created Secret for the test environment
+- Deploying the go application via Deployment(here ConfigMap and Secret mounted using MountPath)
+- before the deployment is successfully running, it will go through some steps <br>
+   -> it will start -> read the config -> successfully load the config. (this data is stored in logs) <br>
+   -> it will start -> read the secret -> successfully load the secret. (this data is stored in logs)
 
-*Note: Once the deployment fetch the config and handitover to the pod which is then handitover to the container <br>
-but the application doesn't know the config data is coming from ConfigMap, it feels like* <br>
-*the whole ConfigMap data is a part of the application*
 
 
 
