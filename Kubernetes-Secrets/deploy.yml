@@ -38,13 +38,13 @@ spec:
       - key: "cattle.io/os"
         value: "linux"
         effect: "NoSchedule"      
-# `volumeMounts` section for configmap
+# `volumeMounts` section for configmap and secret
         volumeMounts:
          - name: config-volume
            mountPath: /configs/
          - name: secret-volume
            mountPath: /secrets/
-# `volumes` section for configmap 
+# `volumes` section for configmap and secret
         volumes:
         - name: secret-volume
           secret:
