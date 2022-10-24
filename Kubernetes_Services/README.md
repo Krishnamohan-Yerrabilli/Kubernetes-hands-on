@@ -48,7 +48,7 @@ Therefore, it cannot be accessed by the cluster IP address.
 
 A load balancer service provides the equivalent of a clusterIP service and extends it to an <br>
 external load balancer specific to the cloud provider. This is helpful for clusters running <br>
-on public cloud providers such as AWS or Azure.
+on public cloud providers such as AWS, Azure or any other cloud service.
 
 ## How does a Kubernetes service work? 
 
