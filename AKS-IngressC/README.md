@@ -1,5 +1,9 @@
-Setting up access with NGINX - step by step
+<div align=center>
 
+# Setting up access with NGINX - step by step
+
+
+</div>
 
 There are many ingress-controllers models, but NGINX is a widely used 
 ingress controller, we will look at how to set it up with Azure Kubernetes 
