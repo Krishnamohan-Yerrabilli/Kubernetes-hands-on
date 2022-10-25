@@ -2,7 +2,8 @@
 
 # Setting up access with NGINX - step by step
 
-
+![Jenkins](https://user-images.githubusercontent.com/58173938/197652617-bd95adab-38a1-480f-805d-96fd7a1184ed.png)
+    
 </div>
 
 There are many ingress-controllers models, but NGINX is a widely used 
