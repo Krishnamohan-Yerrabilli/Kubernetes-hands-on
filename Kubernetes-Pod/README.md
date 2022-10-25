@@ -1,14 +1,16 @@
-## what is a pod?
+<div align=center>
 
+# What is a pod?
+
+</div>	
+	
 - A pod is like a smallest cookie_box in the kubernetes world
 
 - A container is like a cookie which is stored inside the cookie_box(pod)
 
 - It is the foundational concept in the k8's all other objects(cookie_box) models are based on the pod
-	
-	
-	
-## what is pod deployment?
+		
+# what is pod deployment?
 
 - when we intially setup a pod, we give this specifications from a file called (manifest(a set of desired
  state which is wanted by the user))   
