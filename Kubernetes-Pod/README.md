@@ -1,6 +1,8 @@
 <div align=center>
 
 # What is a pod?
+	
+![image](https://d33wubrfki0l68.cloudfront.net/aecab1f649bc640ebef1f05581bfcc91a48038c4/728d6/images/docs/pod.svg)
 
 </div>	
 	
