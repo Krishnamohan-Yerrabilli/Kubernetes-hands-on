@@ -2,6 +2,7 @@
   
 # Understanding Kubernetes Namespaces 
 
+![Jenkins (1)](https://user-images.githubusercontent.com/58173938/197653210-f386b305-888c-42bf-9536-4614b94a67d9.png)
 
 </div>  
   
