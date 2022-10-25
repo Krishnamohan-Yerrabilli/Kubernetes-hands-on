@@ -1,8 +1,10 @@
 <div align=center>
 
 # What is a pod?
-	
-![image](https://d33wubrfki0l68.cloudfront.net/aecab1f649bc640ebef1f05581bfcc91a48038c4/728d6/images/docs/pod.svg)
+
+<a href="[https://github.com/alifiroozi80/CKA](https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on/edit/master/Kubernetes-Pod)">
+    <img src="https://d33wubrfki0l68.cloudfront.net/aecab1f649bc640ebef1f05581bfcc91a48038c4/728d6/images/docs/pod.svg" alt="Logo" width="850" height="400">
+</a>
 
 </div>	
 	
