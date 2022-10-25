@@ -198,6 +198,4 @@ Intra-Pod Communication: Containers use a shared Local Host interface. All the c
 
 ## ❤ Show your support
 
-Give a ⭐️ if this project helped you!
-
-Happy learning!
+Give a ⭐️ if this project helped you, Happy learning!
