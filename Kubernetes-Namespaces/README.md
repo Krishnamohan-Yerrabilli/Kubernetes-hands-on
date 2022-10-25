@@ -1,3 +1,10 @@
+<div align=center>
+  
+# Understanding Kubernetes Namespaces 
+
+
+</div>  
+  
 Kubernetes namespaces allow us to create a logical partition of a physical 
 cluster based on an organization's needs. For example, you can choose to create 
 namespaces such as Dev, UAT, Production, etc., or 
