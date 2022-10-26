@@ -116,6 +116,28 @@ worker nodes are part of the Kubernetes cluster.
   </a>
 </div>
 
+### Components of the worker node
+
+#### Kubelet
+
+kubelet is also called an agent node, because it lives on top of every node in the 
+Kubernetes cluster, its main job is to take the pod spec from the API server, and after 
+that it talks to grpc (google remote procedure calls) over from the UNIX sockets and 
+then the info goes through the runtime CRI (container runtime interface) shim (docker) 
+and any other and then it creates pods as described in the pod spec, and it makes sure 
+the containers are in the running state.
+<br>
+
+<div align="center">
+  <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
+    <img src="https://user-images.githubusercontent.com/58173938/192191843-cc474485-bddd-491c-b918-493762812654.png" alt="kuber" width="600" height="250">
+</a>
+</div>
+
+<div align="center">
+Here the kubelet acts as the client, and CRI shim as the server.
+</div>
+
 
 
 
