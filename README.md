@@ -72,6 +72,24 @@ cluster, The role of the API server is to communicate with other components in t
 such as scheduler, etcd, control manager, kubelet, kube-proxy it's mandatory to communicate 
 to have API server in between them.
 
+#### Control Manager
+
+The control manager's role is to It continuously checks whether the given desired state is 
+running or not, suppose we want to deploy the application in 3 nodes, assume 3 pods 
+have been allocated for three different nodes, now what if 1 pod is down, what if 3 pods 
+have been down, there were control manager comes into rescue, it takes the information 
+which provide by the node and the etcd, and check whether the given state is equal to 
+the current state, if it does not satisfy the desired state then the control manager restarts a 
+new pod, by using different types of controllers. 
+
+There are lot of types of controllers beyond the control manager some of the important one's are
+
+- Node controller
+- Deployment controller
+- Replication controller
+- Endpoint controller
+- Service-token controller
+
 
 
 
