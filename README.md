@@ -29,3 +29,12 @@ it's not such a big deal to manually restart the container, but what if a large 
 went down suddenly, wouldn't be easy this task will be automatically done, this is where Kubernetes comes, k8's will restart the containers, not only that it also provides many services such as logging,
 load balancing, secret, scheduling, scaling, fault-tolerance, deployment.
 
+## Kubernetes architecture
+
+<div align="center">
+  <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
+    <img src="https://storage.googleapis.com/algodailyrandomassets/curriculum/software-engineering/kubernetes/Architecture.png" alt="kuber" width="800" height="500">
+  </a>
+</div>
+<br>
+
