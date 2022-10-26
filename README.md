@@ -166,6 +166,14 @@ containers are basically invented to run micro-services, if you want to learn mo
 this you can check out my blog on Docker.
 <br>
 
+### Complete Architecture
+
+<div align="center">
+  <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
+    <img src="https://user-images.githubusercontent.com/58173938/197555335-c53a9357-1af8-4856-bfa7-f5d05ab66e35.png" alt="kuber" width="800" height="500">
+  </a>
+</div>
+
 
 
 
