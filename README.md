@@ -138,6 +138,19 @@ the containers are in the running state.
 Here the kubelet acts as the client, and CRI shim as the server.
 </div>
 
+#### kube-proxy
+
+Its job is to direct the incoming requests from the client to the designated pods in the 
+node, to the appropriate pods, but how is it possible through some service(service 
+is an object in Kubernetes) a service is worked by depending on some rules which are provided 
+by Kube-proxy, based on these rules load balancing would be done. 
+<br>
+<div align="center">
+  <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
+    <img src="https://user-images.githubusercontent.com/58173938/192191859-8a41946e-1cc6-41bd-9ece-1e4216ad05ae.png" alt="kuber" width="800" height="500">
+  </a>
+</div>
+
 
 
 
