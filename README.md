@@ -97,6 +97,12 @@ Kubernetes is a distributed system, so it wants a distributed storage to store t
 the desired state is nothing but a client requirement, and it also stores data about the current status, 
 and metadata.
 
+#### Scheduler
+
+Its role is to assign pods to the nodes, it's job is to check the suitable nodes by means 
+of given constraints and available resources, then it schedules the pods to the nodes, 
+it is done by following Kubernetes scheduling principles.
+
 
 
 
