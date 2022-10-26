@@ -192,6 +192,14 @@ this has 1 drawback this performance is fully based on your PC resources, which 
 work with limited resources, to note Minikube is not for production environment. for more
 information on Minikube you can refer to this [Link](https://minikube.sigs.k8s.io/docs/start/)
 
+#### Cloud Platforms 
+
+So many cloud providers can provide Kubernetes cluster by buying their resources, 
+each cloud provider has their own Kubernetes model, but under the hood all works 
+on the same principle, like aws has EKS(Elastic Kubernetes Service), Microsoft azure has
+ their own AKS (Azure Kubernetes Service), GCP has its GKE(google's Kubernetes 
+engine), and Digital ocean has its DOKS(Digital ocean Kubernetes service) and many
+ cloud providers have adopted k8's for their own functionality and for their different client needs.
 
 
 
