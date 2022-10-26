@@ -174,6 +174,16 @@ this you can check out my blog on Docker.
   </a>
 </div>
 
+### Installation
+
+#### Play with K8s 
+
+If you want to start playing with k8's, or you want to test something in an Kubernetes 
+environment, to this you don't pay to any cloud provider, play with K8 is a playground 
+which allows users to run K8s clusters in a matter of seconds, for any review purposes also 
+you can use it, to get started you just need a docker or a GitHub account, for more information 
+you can refer to this [link](https://labs.play-with-k8s.com/).
+
 
 
 
