@@ -103,6 +103,19 @@ Its role is to assign pods to the nodes, it's job is to check the suitable nodes
 of given constraints and available resources, then it schedules the pods to the nodes, 
 it is done by following Kubernetes scheduling principles.
 
+### Worker node
+
+Its job is to run the containers in the pods on the node. a single node has multiple pods.
+worker nodes are part of the Kubernetes cluster.
+
+<br>
+
+<div align="center">
+  <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
+    <img src="https://startkubernetes.com/static/771d7faf2ce188f54440c2ed984fa080/5a190/k8s-worker.png" alt="kuber" width="800" height="500">
+  </a>
+</div>
+
 
 
 
