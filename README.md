@@ -6,7 +6,7 @@
 <br>
 <div align="center">
 This repo consists of all my learnings, I explained different concepts in detail with practical <br>
-exposure, feel free to fork, if you like my work leave a ⭐ <br>Thank you, happy learning :)
+exposure, feel free to fork, if you like my work leave a ⭐ <br>Thank you, happy learning!!
 </div>
 <br>
 
