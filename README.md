@@ -90,6 +90,13 @@ There are lot of types of controllers beyond the control manager some of the imp
 - Endpoint controller
 - Service-token controller
 
+#### Etcd 
+
+etcd holds the desired state, in the sense of key-value pairs stored for shared configuration, 
+Kubernetes is a distributed system, so it wants a distributed storage to store the desired state, 
+the desired state is nothing but a client requirement, and it also stores data about the current status, 
+and metadata.
+
 
 
 
