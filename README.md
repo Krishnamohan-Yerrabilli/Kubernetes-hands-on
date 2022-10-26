@@ -151,6 +151,13 @@ by Kube-proxy, based on these rules load balancing would be done.
   </a>
 </div>
 
+#### Pods
+
+A pod is the smallest unit in the Kubernetes, like a container, is the smallest unit in the docker 
+such as a pod in the K8. A pod's job is to run the containers inside it, containers are wrapped 
+by a pod, and we interact and manage containers through the pod. there is an outline where we 
+want to run multiple containers in the same pod, like one container helping to another container. 
+
 
 
 
