@@ -184,6 +184,14 @@ which allows users to run K8s clusters in a matter of seconds, for any review pu
 you can use it, to get started you just need a docker or a GitHub account, for more information 
 you can refer to this [link](https://labs.play-with-k8s.com/).
 
+#### Minikube
+
+This is my favorite one, Minikube it helps to interact with Kubernetes in a local environment, 
+it provides a single cluster, the same system acts as a master as well as worker node, but 
+this has 1 drawback this performance is fully based on your PC resources, which means it will be 
+work with limited resources, to note Minikube is not for production environment. for more
+information on Minikube you can refer to this [Link](https://minikube.sigs.k8s.io/docs/start/)
+
 
 
 
