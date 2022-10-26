@@ -45,4 +45,21 @@ which controls the nodes.these nodes are nothing but physical servers or VMs, wh
 inside a data center applications are run inside the node, these nodes are previously called 
 minions, In that, we have a lot of components such as type of service, cluster, pod. 
 
+### Master Node aka (Control plane)
+
+<br>
+<div align="center">
+  <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
+    <img src="https://startkubernetes.com/static/7b7a66152f804ca26d48493975f99124/29be2/k8s-master.png" alt="kuber" width="800" height="500">
+  </a>
+</div>
+<br>
+
+The Control plane acts like a mother to all worker nodes, It is responsible for doing many 
+operations, such as scheduling worker nodes, taking control of the whole cluster, majorly 
+it has 4 components API server, control manager, etcd, scheduler, the primary component 
+in the cluster is the API server which communicates with the host and many other parts in 
+the cluster, the control manager takes control of the fault tolerance, and many more, such 
+as if any pods(which we see in a bit), etcd holds our desired state data(YAML files which we
+ see in a bit), and scheduler which schedules pods on available nodes.
 
