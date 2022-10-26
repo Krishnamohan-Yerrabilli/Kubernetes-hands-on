@@ -38,3 +38,11 @@ load balancing, secret, scheduling, scaling, fault-tolerance, deployment.
 </div>
 <br>
 
+### Brief 
+
+Kubernetes architecture has the master node, which is also called as control plane nowadays, 
+which controls the nodes.these nodes are nothing but physical servers or VMs, which are run 
+inside a data center applications are run inside the node, these nodes are previously called 
+minions, In that, we have a lot of components such as type of service, cluster, pod. 
+
+
