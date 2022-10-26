@@ -158,6 +158,14 @@ such as a pod in the K8. A pod's job is to run the containers inside it, contain
 by a pod, and we interact and manage containers through the pod. there is an outline where we 
 want to run multiple containers in the same pod, like one container helping to another container. 
 
+#### Containers 
+
+This is where the real application is running, this is where the actual thing happens, we run 
+containerized applications inside the containers, this are actually built by docker image, 
+containers are basically invented to run micro-services, if you want to learn more about 
+this you can check out my blog on Docker.
+<br>
+
 
 
 
