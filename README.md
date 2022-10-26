@@ -210,4 +210,23 @@ using network namespaces this is assigned to the pods, multiple containers share
 the same IP address inside the single node to communicate with each other, this is 
 also means they will share the same volumes, Cgroup limits, and even IPC names.
 
+### Pod Networking 
+
+### How pods communicate with each other? 
+
+- Inter-Pod communication: All the Pod IP addresses are fully routable on the Pod Network inside the Kubernetes cluster.
+  Containers use a shared Local Host interface. All the containers can communicate with each other’s ports on localhost
+  <br>
+
+<div align="center">
+  <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
+    <img src="https://kubebyexample.com/sites/default/files/2021-06/pod-to-service.svg_.png" alt="kuber" width="800" height="500">
+  </a>
+</div>
+
+<p>
+
+## ❤ Show your support
+
+Give a ⭐️ if this project helped you, Happy learning!
 
