@@ -202,4 +202,12 @@ engine), and Digital ocean has its DOKS(Digital ocean Kubernetes service) and ma
  cloud providers have adopted k8's for their own functionality and for their different client needs.
 
 
+#### More about Pods
+
+Every node in the cluster has a unique IP address, and each pod inside the node has
+ a dedicated IP address assigned to it, pods communicate with the outside world by 
+using network namespaces this is assigned to the pods, multiple containers share 
+the same IP address inside the single node to communicate with each other, this is 
+also means they will share the same volumes, Cgroup limits, and even IPC names.
+
 
