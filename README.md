@@ -63,3 +63,15 @@ the cluster, the control manager takes control of the fault tolerance, and many 
 as if any pods(which we see in a bit), etcd holds our desired state data(YAML files which we
  see in a bit), and scheduler which schedules pods on available nodes.
 
+### Components of the Master Node
+
+#### API server
+
+API server acts like the heart of the cluster, without API services we can't interact with k8's 
+cluster, The role of the API server is to communicate with other components in the cluster, 
+such as scheduler, etcd, control manager, kubelet, kube-proxy it's mandatory to communicate 
+to have API server in between them.
+
+
+
+
