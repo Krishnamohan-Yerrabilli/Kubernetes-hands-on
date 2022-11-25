@@ -1,5 +1,5 @@
-// Command to execute Service.yml
-kubectl apply -f mysql-secret.yaml 
+//Command to execute Service.yml
+kubectl apply -f mysql-secret.yml 
 
 // Get the list of secrets
 kubectl get secrets 
@@ -7,3 +7,9 @@ kubectl get secrets
 //Get the pv list
 kubectl get pv
 
+//Command to get storage class list
+kubectl get storageclass
+
+
+//Command to execute StatefulSet.yaml
+kubectl apply -f StatefulSet.yaml
