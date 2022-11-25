@@ -16,3 +16,5 @@ kubectl apply -f StatefulSet.yaml
 //Command to get the pod list
 kubectl get pods
 
+//Command to execute Headless Service for mysql application
+kubectl apply -f SShs.yaml
