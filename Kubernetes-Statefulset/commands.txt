@@ -1,1 +1,2 @@
 kubectl apply -f mysql-secret.yaml // Command to execute Service.yml
+kubectl get secrets // Get the list of secrets
