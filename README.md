@@ -34,10 +34,11 @@ load balancing, secret, scheduling, scaling, fault-tolerance, deployment.
 
 <div align="center">
   <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
-    <img src="https://storage.googleapis.com/algodailyrandomassets/curriculum/software-engineering/kubernetes/Architecture.png" alt="kuber" width="800" height="500">
+    <img src="https://user-images.githubusercontent.com/58173938/204005064-0eebc971-a524-44bb-bac4-b86b9e0c3417.png" alt="kuber" width="800" height="500">
   </a>
 </div>
-<br>
+
+
 
 ### Brief 
 
