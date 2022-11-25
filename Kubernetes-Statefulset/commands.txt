@@ -24,3 +24,7 @@ kubectl get svc
 
 //Command to execute client.yaml
 kubectl apply -f Client.yaml
+
+//Command to enter into mysql client
+kubectl exec --stdin --tty mysql-client -- sh
+
