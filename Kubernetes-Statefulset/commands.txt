@@ -10,6 +10,9 @@ kubectl get pv
 //Command to get storage class list
 kubectl get storageclass
 
-
 //Command to execute StatefulSet.yaml
 kubectl apply -f StatefulSet.yaml
+
+//Command to get the pod list
+kubectl get pods
+
