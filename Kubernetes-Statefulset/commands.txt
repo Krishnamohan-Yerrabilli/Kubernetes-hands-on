@@ -21,3 +21,6 @@ kubectl apply -f SShs.yaml
 
 //list of running  services
 kubectl get svc
+
+//Command to execute client.yaml
+kubectl apply -f Client.yaml
