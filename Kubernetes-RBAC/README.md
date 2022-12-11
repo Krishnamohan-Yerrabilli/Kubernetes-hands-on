@@ -1,6 +1,11 @@
-### RBAC
+<div align=center>
+  
+## Role Based Access Control
 
 ![p1](https://user-images.githubusercontent.com/58173938/206911512-7762d088-22fe-483a-b1a7-ee63b5b021a3.png)
+
+  </div>
+  
 Kubernetes does not have a concept of users, instead it relies on certificates and would `only` trust certificates signed by its `own CA`. In the above presentation the username Mohan is just a (string of alpha-numeric characters)
 
 RBAC stands for "Role-Based Access Control" and is a method for managing `permissions` in a Kubernetes cluster. In simple terms, RBAC allows you to `define roles` for individual users and groups, and then `assign` those roles to `specific resources` within your cluster. This allows you to control which users and applications have access to `certain parts` of your cluster, and can help to `ensure` that your cluster is secure and `well-organized`.
