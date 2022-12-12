@@ -1,5 +1,7 @@
 <div align=center>
+
 ## Labels and Selectors
+
 </div>
 
 labels and selectors are used to identify and group objects, such as pods and services. Labels are key-value pairs that are attached to objects, while selectors are used to filter and select a group of objects based on their labels.
