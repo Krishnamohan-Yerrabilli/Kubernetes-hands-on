@@ -22,7 +22,7 @@ This command should show a list of all the Pods in the cluster, along with the n
 
 ![3 running](https://user-images.githubusercontent.com/58173938/206951062-005b26ed-c604-4f3c-989a-be8512bedcef.png)
 
-n addition to running system-level services, DaemonSets can also be used to run other types of workloads on each node in a cluster. For example we could use a DaemonSet to run a batch processing job on each node in the cluster, or to run a distributed in-memory cache. The main advantage of using a DaemonSet is that it ensures that the specified number of Pods are running on each node in the cluster, making it easy to deploy and manage workloads at a large scale.
+In addition to running system-level services, DaemonSets can also be used to run other types of workloads on each node in a cluster. For example we could use a DaemonSet to run a batch processing job on each node in the cluster, or to run a distributed in-memory cache. The main advantage of using a DaemonSet is that it ensures that the specified number of Pods are running on each node in the cluster, making it easy to deploy and manage workloads at a large scale.
 
 To deploy a certain number of Pods on each node using a DaemonSet we can specify the replicas field in the DaemonSet's manifest file. The replicas field specifies the number of copies of the Pod that should be running on each node in the cluster.
 
