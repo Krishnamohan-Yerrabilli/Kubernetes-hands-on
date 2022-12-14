@@ -51,7 +51,7 @@ minions, In that, we have a lot of components such as type of service, cluster, 
 <br>
 <div align="center">
   <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
-    <img src="https://user-images.githubusercontent.com/58173938/206866744-1748b720-b526-433d-856f-2f9d1c2afb03.png" alt="kuber" width="800">
+    <img src="https://user-images.githubusercontent.com/58173938/207633973-993c60de-5821-4d93-ae35-41a6f68ce5ee.png" alt="kuber" width="800">
   </a>
 </div>
 <br>
