@@ -1,5 +1,7 @@
 <div align=center>
-Imperative-and-Declarative
+
+# Imperative-and-Declarative
+
 </div>
 
 In Kubernetes, imperative and declarative are two different approaches to managing the configuration and deployment of applications.
