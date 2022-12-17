@@ -201,9 +201,12 @@ worker nodes are part of the Kubernetes cluster.
 
 <div align="center">
   <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
-    <img src="https://user-images.githubusercontent.com/58173938/208222274-3253210c-6536-4801-9613-5e9a18432fae.jpg" alt="kuber" width="800" height="500">
+    <img src="https://user-images.githubusercontent.com/58173938/208225446-a9c3a5c7-e440-41ce-b777-ff3b171b87d7.jpg" alt="kuber">
   </a>
 </div>
+
+![Cloud Native Landscape pdf (3)]()
+
 
 ### Components of the worker node
 
@@ -260,7 +263,7 @@ this you can check out my blog on Docker.
 
 <div align="center">
   <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
-    <img src="https://user-images.githubusercontent.com/58173938/208224539-8c558160-802f-4a09-9a17-ca425860f8d6.png" alt="kuber">
+    <img src="https://user-images.githubusercontent.com/58173938/208225458-91133f1c-65f4-428c-99a2-3cff1f9fedfd.jpg" alt="kuber">
   </a>
 </div>
 
