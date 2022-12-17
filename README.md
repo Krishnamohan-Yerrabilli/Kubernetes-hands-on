@@ -205,9 +205,6 @@ worker nodes are part of the Kubernetes cluster.
   </a>
 </div>
 
-![Cloud Native Landscape pdf (3)]()
-
-
 ### Components of the worker node
 
 #### Kubelet
