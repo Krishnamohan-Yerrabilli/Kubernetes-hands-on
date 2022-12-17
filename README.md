@@ -260,7 +260,7 @@ this you can check out my blog on Docker.
 
 <div align="center">
   <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
-    <img src="https://user-images.githubusercontent.com/58173938/208225458-91133f1c-65f4-428c-99a2-3cff1f9fedfd.jpg" alt="kuber">
+    <img src="https://user-images.githubusercontent.com/58173938/208247626-7db13e5c-c857-45da-852e-a39e4e322bd9.jpg" alt="kuber">
   </a>
 </div>
 
