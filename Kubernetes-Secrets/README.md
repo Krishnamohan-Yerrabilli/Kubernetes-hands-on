@@ -57,7 +57,7 @@ isolate secrets from other Kubernetes resources and minimize exposure.
 
 
 
-```
+```yaml
 #(deploy.yaml)
 
 # `volumeMounts` section for configmap and secrets

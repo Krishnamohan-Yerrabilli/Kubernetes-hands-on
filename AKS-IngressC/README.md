@@ -2,7 +2,7 @@
 
 # Setting up access with NGINX - step by step
 
-<a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on/edit/master/AKS-IngressC">
+<a href="https://github.com/Kriyamlnamohan-Yerrabilli/Kubernetes-hands-on/edit/master/AKS-IngressC">
     <img src="https://user-images.githubusercontent.com/58173938/197652617-bd95adab-38a1-480f-805d-96fd7a1184ed.png" alt="Logo" width="850" height="550">
 </a>
 
@@ -19,19 +19,19 @@ Step 1: Set up your `AKS cluster` and connect to it
 
     To do this, browse to the AKS cluster resource in the Azure portal 
     and click Connect. The commands required to connect through your 
-    shell using the Azure CLI are shown.
+    yamlell using the Azure CLI are yamlown.
 
 Step 2: Install the `NGINX Ingress` controller
 
     This will install the controller into the ingress-nginx namespace, 
     creating that namespace if it doesn't already exist.
 
-```
+```yaml
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.3.0/deploy/static/provider/cloud/deploy.yaml
 
 ```
 
-```
+```yaml
 namespace/ingress-nginx created 
 serviceaccount/ingress-nginx created 
 serviceaccount/ingress-nginx-admission created 
@@ -56,11 +56,11 @@ validatingwebhookconfiguration.admissionregistration.k8s.io/ingress-nginx-admiss
 
 Step 3: Check the Ingress controller pod is running
 
-```
+```yaml
 kubectl get pods --namespace ingress-nginx
 ```
 
-```
+```yaml
 Name                                         Ready   Status      Restarts   AGE
 ingress-nginx-admission-create--1-3fh4s      0/1     Completed   0          10m
 ingress-nginx-admission-patch--1-ts9ci       0/1     Running     0          10m
@@ -71,13 +71,13 @@ Step 4: Check the `NGINX Ingress controller` has been assigned a public Ip addre
 
 You can see the `Service` type is `LoadBalancer`
 
-```
+```yaml
 NAME                                        TYPE            CLUSTER-IP      EXTERNAL-IP     PORT(S)                        AGE  
 ingress-nginx-controllerLoadBalancer        LoadBalancer    10.0.125.458    20.246.472.416  80:31170/TCP,443:32018/TCP     12m
 
 ```
 
-    When you try to connect to this IP address, it will show you an NGINX 404 page. 
+    When you try to connect to this IP address, it will yamlow you an NGINX 404 page. 
     Because we haven't set up any routing rules for our services yet
 
 
@@ -86,7 +86,7 @@ Step 5 – Now setting up a basic web app for testing our new Ingress controller
 First, we need to set up a `DNS record` pointing to the `External IP`
 address we `discovered` in the previous step.
 
-```
+```yaml
 Step 1: DNS Zone Creation
 Step 2: Managed Identity Creation
 Step 3: Create azure.json file
@@ -104,7 +104,7 @@ with an IP address.
 
 we'll look at `declarative approaches` later in this article.
 
-```
+```yaml
 kubectl create ingress demo --class=nginx --rule [DNS_NAME]/=demo:80
 ```
 
@@ -120,49 +120,44 @@ Now we'll set up two more web apps and route traffic between them using NGINX.
 We will create two YAML files using the demo apps from the official Azure documentation.
 
 
-[aks-hwo.yaml](https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on/blob/master/AKS-IngressC/aks-hwo.yml)
+[aks-hwo.yaml](https://github.com/Kriyamlnamohan-Yerrabilli/Kubernetes-hands-on/blob/master/AKS-IngressC/aks-hwo.yml)
 
-[aks-hwo2.yaml](https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on/blob/master/AKS-IngressC/aks-hwo2.yml)
+[aks-hwo2.yaml](https://github.com/Kriyamlnamohan-Yerrabilli/Kubernetes-hands-on/blob/master/AKS-IngressC/aks-hwo2.yml)
 
 
 Apply the two configuration files to setup the apps:
 
-```
-
+```yaml
 kubectl apply -f aks-hwo.yaml --namespace ingress-nginx
 kubectl apply -f aks-hwo2.yaml --namespace ingress-nginx
-
 ```
 Output 
 
-```
+```yaml
 deployment.apps/aks-helloworld-one created
 service/aks-helloworld-one created
-
 ```
 
-```
+```yaml
 deployment.apps/aks-helloworld-two is created
 service/aks-helloworld-two is created
-
 ```
 
 
 Check that the new pods are running 
 (now you can see two aks-helloworld pods are running):
 
-```
+```yaml
 kubectl get pods --namespace ingress-nginx
 ```
 
-```
+```yaml
 Name                                         Ready   Status      Restarts   AGE
 aks-helloworld-one-nd5evg58a6-d31d4          1/1     Running     0          19m
 aks-helloworld-two-5dz3fvesda-krs8s          1/1     Running     0          19m
 ingress-nginx-admission-create--1-3fh4s      0/1     Completed   0          57m
 ingress-nginx-admission-patch--1-ts9ci       0/1     Running     0          57m
 ingress-nginx-controller-55dcf56b68-ojdkn    1/1     Running     0          57m
-
 ```
 
 Step 8: Set up `Ingress` to route traffic between the two apps
@@ -175,18 +170,17 @@ traffic is redirected to aks-helloworld-one.(we set this to default) if user doe
 specify what route wants to connect
 
 
-[hw-ingress.yaml](https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on/blob/master/AKS-IngressC/hw-ingress.yml)
+[hw-ingress.yaml](https://github.com/Kriyamlnamohan-Yerrabilli/Kubernetes-hands-on/blob/master/AKS-IngressC/hw-ingress.yml)
 
 Now it's time to `Create Ingress`, apply the below command 
 
-```
+```yaml
 kubectl apply -f hw-ingress.yaml --namespace ingress-nginx
 ```
 
-```
+```yaml
 ingress.networking.k8s.io/hw-ingress created
 ingress.networking.k8s.io/hw-ingress-static created
-
 ```
 Now check the static IP that you received and!paste it on browser
 

@@ -26,7 +26,7 @@ The developer writes a new application and creates a Kubernetes deployment file,
 
 The developer uses the kubectl command to connect to the Kubernetes cluster, and deploys the application by running the following command:
 
-```
+```yaml
 kubectl apply -f deployment.yaml
 ```
 
@@ -34,7 +34,7 @@ The Kubernetes API server receives the command and creates the necessary compone
 
 The developer can use the kubectl command to view the status of the deployment, and see whether it was successful. For example, they might run the following command:
 
-```
+```yaml
 kubectl get deployments
 ```
 
@@ -64,7 +64,7 @@ Create a new directory for your plugin, and navigate to that directory in a term
 Create a file called my_plugin.py, and add the following code to the file:
 
 
-```
+```yaml
 from kubectl.commands import kubectl_command
 
 @kubectl_command(name='my-plugin', help='This is my custom plugin')
@@ -74,14 +74,14 @@ def my_plugin(args):
 
 Install the plugin by running the following command:
 
-```
+```yaml
 kubectl plugin install my_plugin.py
 ```
 
 
 Use the custom plugin by running the my-plugin command:
 
-```
+```yaml
 kubectl my-plugin
 ```
 

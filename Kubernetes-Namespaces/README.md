@@ -14,7 +14,7 @@ you can create namespaces based on the name of the teams working in the cluster.
 
 When a cluster is setup, Kubernetes creates a number of namespaces. To view the namespaces, type below.
 
-``` 
+``` yaml
 kubectl Get namespaces
 ``` 
 
@@ -32,7 +32,7 @@ performance of node heartbeats as the cluster scales and isolates again.
 All the operations we have done so far are taking place in the default namespace.
 
 So, let's create our first namespace using the yaml file below.
-``` 
+``` yaml
 apiVersion: v1
 Type: namespace
 Metadata:
@@ -42,7 +42,7 @@ Metadata:
 ``` 
 To create a namespace, type the following command.
 
-``` 
+``` yaml
 kubectl create -f namespace-definition.yaml
 ``` 
 
@@ -51,7 +51,7 @@ Kubernetes Namespaces
 Next, let's create a new pod in the production namespace. 
 We can reuse the pod-definition.yaml file we used in the Pods and Pod Lifecycle post.
 
-```
+```yaml
 apiVersion: v1
 Type: Pod
 Metadata:
@@ -69,23 +69,23 @@ Note that the only difference we have now is that we've
 added a Namespace field under the Metadata section.
 
 Let's create this pod using the following command.
-``` 
+``` yaml
 kubectl create -f pod-definition.yaml
 ``` 
 Let's check if the pod exists now using the command.
-``` 
+``` yaml
 Get kubectl pods
 ``` 
 No it isn't. The kubectl get pods command looks for pods in the default namespace.
 
 To get pods in prodnamespace we need to run below command.
-``` 
+``` yaml
 kubectl pods -n gets the output
 ``` 
 Kubernetes Namespaces
 
 We can also run the command below to list all pods under all namespaces.
-``` 
+``` yaml
 kubectl get pods --all-namespaces
 ``` 
 Experiment with above config files, that will give what actually going on with this things,

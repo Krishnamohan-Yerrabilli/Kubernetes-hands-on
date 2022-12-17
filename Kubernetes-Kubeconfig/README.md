@@ -8,7 +8,7 @@ The kubeconfig file is typically used with the kubectl command-line tool, which 
 
 Here is an example kubeconfig file that contains information for connecting to multiple Kubernetes clusters:
 
-```
+```yaml
 apiVersion: v1
 clusters:
 - cluster:
@@ -38,7 +38,6 @@ users:
     client-certificate-data: <base64-encoded-client-cert>
     client-key-data: <base64-encoded-client-key>
 ```
-
 Each section of the kubeconfig file (clusters, contexts, users) contains a list of entries, where each entry provides information about a particular Kubernetes cluster, user, or context.
 
 For example, the clusters section contains a list of entries that specify the details of each cluster that the kubeconfig file can connect to. Each entry includes the URL of the cluster's API server, as well as the certificate authority (CA) certificate that is used to authenticate the server's certificate.
@@ -54,4 +53,3 @@ The kubeconfig file is a convenient and powerful way to manage access to multipl
 There are a few potential disadvantages to using a kubeconfig file. For example, because the file contains sensitive information such as credentials and certificates, it is important to protect it and keep it secure. Additionally, because the kubeconfig file is a local configuration file, it can be difficult to manage and share kubeconfig files across multiple users or teams.
 
 The kubeconfig file was introduced in Kubernetes version 1.6. Prior to this, Kubernetes used a different configuration file called kubeletconfig, which was designed to store configuration information for the kubelet daemon that runs on each node in the cluster. However, the kubeletconfig file was not well-suited for managing access to the cluster's API server, so the kubeconfig file was introduced to fill this need.
-

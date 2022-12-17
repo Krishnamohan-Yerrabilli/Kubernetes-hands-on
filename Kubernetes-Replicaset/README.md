@@ -35,11 +35,11 @@ Let's see what are the different resources available, there is a command for thi
 
 `Note`: This resources are not constant there are maybe changed, remove,or added new resources for every new release
 
-``` 
+```s
 kubectl api-resources 
 ``` 
 
-```
+```yaml
 NAME                              SHORTNAMES   APIVERSION                             NAMESPACED   KIND
 bindings                                       v1                                     true         Binding
 componentstatuses                 cs           v1                                     false        ComponentStatus
@@ -90,7 +90,7 @@ These are some of the resources and types of objects you can see
 
 - Now let's understand the replica set with an example 
 
-```
+```yaml
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -118,7 +118,7 @@ spec:
 
 Let's understand what is going inside (step by step)
 
-```
+```yaml
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -143,7 +143,7 @@ There are some resources you want to mention always in you're manifest file such
 > labels are most important in Replicaset more info coming below
 
 
-```
+```yaml
 spec:
   # modify replicas according to your case
   replicas: 4
@@ -176,7 +176,7 @@ There are 2 ways to scale up or scale down the pods, one is modifying the manife
 
 #### Scaling down this is how you do it
  
-```
+```s
 $ kubectl get rs
 NAME       DESIRED   CURRENT   READY   AGE
 frontend   4         4         4       19s
@@ -188,7 +188,7 @@ frontend   2         2         2       23s
 
 ```
 #### Scaling up this is how you do it
-```
+```s
 $ kubectl get rs
 NAME       DESIRED   CURRENT   READY   AGE
 frontend   2         2         0       32s
@@ -197,18 +197,17 @@ replicaset.apps/frontend scaled
 $ kubectl get rs
 NAME       DESIRED   CURRENT   READY   AGE
 frontend   6         6         6       45s
-
 ```
 
 #### How to delete replicaset?
 
-```
+```s
 kubectl delete rs frontend
 ```
 
 
 #### How to delete replicaset without deleting pods?
 
-```
+```s
 kubectl delete rs frontend --cascade=orphan
 ```

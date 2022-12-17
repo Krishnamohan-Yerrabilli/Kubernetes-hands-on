@@ -38,8 +38,7 @@
 
 ### below commands
 
-```
-
+```yaml
 -d    -> Detach mode (no auto-logged into the running container)
 --rm  -> when we logged out of from the running container it will automatically stop the container too 
 -e    -> env (imperative way)
@@ -49,7 +48,7 @@ bash  -> shell environment
 
 ```
 # Practise example by using Postgresdb
-```
+```s
 
 ~ docker run -d --rm -e POSTGRES_DB=postgresdb -e POSTGRES_USER=mohan -e POSTGRES_PASSWORD=mohan123 postgres:15.0
 df34bea9bbcae7297fe59f2de4a30f4459905d4dcd5218e7161253d83761af5b
@@ -124,7 +123,7 @@ pods that are running and any namespace can use a persistence volume
 Note: Whereas PVC are bound to namespaces
 
 
-```
+```yaml
 
 ~ kubens pg
 ✔ Active namespace is "pg"

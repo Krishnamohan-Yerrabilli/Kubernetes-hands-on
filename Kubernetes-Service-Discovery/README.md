@@ -2,7 +2,7 @@ DNS
 
 Each service will get a DNS name that other microservices can use. The format of the DNS record would be: 
 
-```
+```yaml
   service-name.namespace.svc.cluster.local
 
 
@@ -26,7 +26,7 @@ ClusterIP
 available in the cluster. reliant applications can interact with other applications internally <br>
 using the ClusterIP service.
 
-```
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -47,7 +47,7 @@ NodePort
 NodePort services are accessible outside the cluster. It creates a mapping of pods to its <br>
 hosting node/machine on a static port.
 
-```
+```yaml
 apiVersion: v1
 kind: Service 
 metadata:
@@ -67,7 +67,7 @@ Load Balancer
 This service type creates load balancers on various cloud providers like AWS, GCP, <br>
 Azure etc. to expose our application to the internet.
 
-```
+```yaml
 apiVersion: v1
 kind: Service 
 metadata: 
@@ -86,7 +86,7 @@ ExternalName
 For any pod to access an application outside of the Kubernetes cluster like <br>
 the external DB server, we use the ExternalName service type.
 
-```
+```yaml
 apiVersion: v1
 kind: Service
 metadata:

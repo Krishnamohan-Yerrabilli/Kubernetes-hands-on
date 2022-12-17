@@ -14,7 +14,7 @@ In Kubernetes, you can use the OwnerReference field to specify the ownership rel
 
 example of using the OwnerReference field to specify an ownership relationship between objects in Kubernetes:
 
-```
+```yaml
 # Deployment object that creates ReplicaSet and Pod objects
 apiVersion: apps/v1
 kind: Deployment

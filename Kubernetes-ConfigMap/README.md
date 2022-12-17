@@ -22,7 +22,7 @@ Firstly, you will need multiple ConfigMaps because each one will act separately 
 And you will have to create and add a ConfigMap to the Kubernetes cluster. 
 You will also have to use the value of ConfigMap in the pod reference
 
-```
+```yaml
 #(deploy.yaml)
 
 volumeMounts:
@@ -31,7 +31,6 @@ volumeMounts:
 volumes:
   configMap:
     name: app-v1-test-config #name of our configmap object
-    
 ```
 
 ## The workflow which I go through

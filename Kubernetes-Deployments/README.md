@@ -1,6 +1,5 @@
 ## Kubernetes deployments:
 
-
 Kubernetes deployments provide information about the characteristics of a particular application or server to the orchestration operating system.  Kubernetes deployments serve as pointers to how Kubernetes servers should deploy and develop pods.
 
 ### Why should we use Kubernetes deployments?
@@ -39,8 +38,6 @@ Additionally, PodTemplateSec issues that arise when you pause deployment in your
 You have the opportunity to track the progress of the application development process that you started with deployments.
 
 In short, Kubernetes deployments can greatly improve your user experience and help you use your pods and containers efficiently.
-
-
 
 ### A recreated strategy
 

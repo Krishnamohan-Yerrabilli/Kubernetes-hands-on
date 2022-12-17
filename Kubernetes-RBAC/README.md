@@ -13,7 +13,7 @@ RBAC stands for "Role-Based Access Control" and is a method for managing `permis
 
 ### Create Kubernetes cluster
 
-  ```
+  ```yaml
   kind create cluster --name rbac --image kindest/node:v1.20.2
   ```
   
@@ -26,7 +26,7 @@ If you are using `minikube` you may find it under ~/.minikube/.
 
 Access the master node:
 
-```
+```s
 docker exec -it rbac-control-plane bash
 
 ls -l /etc/kubernetes/pki
@@ -52,7 +52,7 @@ exit the container
 
 Copy the certs out of our master node:
 
-```
+```yaml
 cd kubernetes/rbac
 docker cp rbac-control-plane:/etc/kubernetes/pki/ca.crt ca.crt
 docker cp rbac-control-plane:/etc/kubernetes/pki/ca.key ca.key
@@ -75,7 +75,7 @@ apk add openssl
 
 Let's create a certificate for Mohan:
 
-```
+```yaml
 #start with a private key
 openssl genrsa -out mohan.key 2048
 ```
@@ -87,7 +87,7 @@ We also need to specify the groups that `mohan` belongs to.
 Let's pretend Mohan is part of the `marketing` team and will be developing applications for the `marketing`.
 
 
-```
+```yaml
 openssl req -new -key mohan.key -out mohan.csr -subj "/CN=mohan/O=Marketing"
 ```
 
@@ -102,30 +102,30 @@ openssl x509 -req -in mohan.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out mo
 
 Let's install kubectl in our container to make things easier:
 
-```
+```s
 apk add curl nano
 curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 mv ./kubectl /usr/local/bin/kubectl
-
 ```
+
 We'll be trying to avoid messing with our current kubernetes config.
 So lets tell kubectl to look at a new config that does not yet exists
 
-```
+```s
 export KUBECONFIG=~/.kube/new-config
 ```
 
 Create a cluster entry which points to the cluster and contains the details of the CA certificate:
 
-```
+```s
 kubectl config set-cluster dev-cluster --server=https://134.183.96.27:52807 \
 --certificate-authority=ca.crt \
 --embed-certs=true
 
 #see changes 
 nano ~/.kube/new-config
-```
+```s
 kubectl config set-credentials mohan --client-certificate=mohan.crt --client-key=mohan.key --embed-certs=true
 
 kubectl config set-context dev --cluster=dev-cluster --namespace=marketing --user=mohan
@@ -136,7 +136,7 @@ kubectl get pods Error from server (Forbidden): pods is forbidden: User "Mohan" 
 
 ### Give Mohan Access
 
-```
+```s
 cd kubernetes/rbac
 kubectl create ns shopping
 
@@ -155,19 +155,19 @@ You can read more about [Kubernetes Service Accounts](https://kubernetes.io/docs
 
 Let's deploy a service account
 
-```
+```s
 kubectl -n shopping apply -f serviceaccount.yaml
 
 ```
 Now we can deploy a pod that uses the service account
 
-```
+```s
 kubectl -n shopping apply -f pod.yaml
 ```
 
 Now we can test the access from within that pod by trying to list pods:
 
-```
+```s
 kubectl -n marketing exec -it marketing-api -- bash
 
 # Point to the internal API server hostname
@@ -193,7 +193,7 @@ curl --cacert ${CACERT} --header "Authorization: Bearer $TOKEN" -s ${APISERVER}/
 
 Now we can allow this pod to list pods in the shopping namespace
 
-```
+```s
 kubectl -n shopping apply -f serviceaccount-role.yaml
 kubectl -n shopping apply -f serviceaccount-rolebinding.yaml
 ```

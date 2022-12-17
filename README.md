@@ -15,6 +15,26 @@ exposure, feel free to fork, if this project helped you please leave a ⭐ <br>T
 
 ## Prerequisites
 
+install Minikube on linux by following these steps:
+
+- Download the latest release of Minikube from the releases page at https://github.com/kubernetes/minikube/releases.
+- Extract the downloaded file and move it to a directory in your PATH. For example:
+
+```s
+tar -xvf minikube-linux-amd64.tar.gz
+sudo mv minikube /usr/local/bin
+```
+Start Minikube by running the following command:
+
+```
+minikube start
+```
+Once Minikube is up and running, you can use the kubectl command-line tool to deploy and manage applications on the cluster.
+
+This will start a single-node Kubernetes cluster using the default configuration. If you want to customize the configuration, you can use the --vm-driver flag to specify the hypervisor to use and the --cpus and --memory flags to set the number of CPUs and memory allocated to the virtual machine, respectively.
+
+For MAC:
+
 * Homebrew: <https://brew.sh/>
 
 ```sh

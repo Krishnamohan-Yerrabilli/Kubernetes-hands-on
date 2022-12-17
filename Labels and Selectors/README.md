@@ -8,7 +8,7 @@ labels and selectors are used to identify and group objects, such as pods and se
 
 For example, let's say we have a Kubernetes deployment with three pods, and we want to use a label and a selector to group the pods together. we could add a label called "environment" with the value "Development" to each of the three pods, like this:
 
-```
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -17,7 +17,7 @@ metadata:
     environment: Development
 ```
 
-```
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -25,7 +25,7 @@ metadata:
   labels:
     environment: Development
 ```
-```
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -36,7 +36,7 @@ metadata:
 
 Then, we could use a selector to filter and select all the pods with the "environment" label set to "Development", like this:
 
-```
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -49,4 +49,3 @@ spec:
 This service would then select and include all the pods with the "environment" label set to "Development".
 
 Labels and selectors are a powerful way to organize and manage our Kubernetes objects, and they can be used in a variety of ways to control which objects are selected and included in a given operation.
-

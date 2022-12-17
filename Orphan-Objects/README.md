@@ -22,25 +22,25 @@ Here are some common operations that you can perform on orphaned pods:
 
 List orphaned pods: You can use the kubectl get pods command to list all the pods in your cluster, and then filter the output to show only orphaned pods. For example:
 
-```
+```s
 kubectl get pods --field-selector='status.phase!=Running'
 ```
 
 Delete orphaned pods: You can use the kubectl delete pod command to delete an orphaned pod. For example:
 
-```
+```s
 kubectl delete pod my-orphaned-pod
 ```
 
 Create a new controller object to adopt an orphaned pod: If you want to adopt an orphaned pod and add it to a new controller object (such as a Deployment), you can use the kubectl patch command to update the pod's metadata.ownerReferences field. For example:
 
-```
+```s
 kubectl patch pod my-orphaned-pod -p '{"metadata":{"ownerReferences":[{"apiVersion":"apps/v1","kind":"Deployment","name":"my-new-deployment","uid":"abcdef01-2345-6789-0123-456789abcdef"}]}}'
 ```
 
 To identify orphaned pods, you can use the kubectl get pods command and filter the output to show only pods that are not managed by a ReplicationController, Deployment, or other controller. For example:
 
-```
+```s
 kubectl get pods --output=jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.metadata.ownerReferences}{"\n"}{end}' | grep -v '\[\]'
 ```
 
@@ -48,7 +48,7 @@ This will list all pods that do not have any owner references, which indicates t
 
 To delete orphaned pods, you can use the kubectl delete pod command followed by the name of the pod you want to delete. For example:
 
-```
+```s
 kubectl delete pod <pod-name>
 ```
 

@@ -12,7 +12,7 @@ You can interact with the Kubernetes API in a number of ways. One common way is 
 
 You can also interact with the Kubernetes API directly by making HTTP requests to the API endpoints. For example, to retrieve a list of pods in a namespace, you can make a GET request to the /api/v1/pods endpoint:
 
-```
+```s
 curl -X GET https://<kubernetes-api-server>/api/v1/pods
 ```
 

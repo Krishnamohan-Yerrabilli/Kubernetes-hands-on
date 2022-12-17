@@ -10,7 +10,7 @@
 
 ## Let's see an simple example of a Kubernetes Job configuration:
 
-```
+```yaml
 apiVersion: batch/v1
 kind: Job
 metadata:
@@ -25,7 +25,6 @@ spec:
       restartPolicy: Never
   backoffLimit: 4
 ```
-
 This configuration creates a Job named my-job that runs a single pod containing a container based on the busybox Docker image. The container runs the echo command to print "Hello, World!" to the console, and then it sleeps for 60 seconds. The restartPolicy field is set to Never, which means that the pod will not be restarted if it fails or is terminated.
 
 The backoffLimit field specifies the maximum number of retries that should be attempted if the pod fails. In this case, the value of 4 means that the Job will be retried up to 4 times if the pod fails.
@@ -34,7 +33,7 @@ To create and run this Job on a Kubernetes cluster, we can use the kubectl comma
 
 For example:
 
-```
+```yaml
 kubectl apply -f my-job.yaml
 ```
 
@@ -52,7 +51,7 @@ A Kubernetes CronJob is a special type of Job that allows we to run a specified 
 
 ## Let's see an simple example of a Kubernetes CronJob configuration:
 
-```
+```yaml
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
@@ -70,7 +69,6 @@ spec:
           restartPolicy: Never
   concurrencyPolicy: Forbid
 ```
-
 This configuration creates a CronJob named my-cronjob that runs a pod containing a container based on the busybox Docker image. The schedule field specifies that the CronJob should run every minute (*/1 * * * * in cron syntax). The jobTemplate field specifies the pod template that should be used for the Job, and the restartPolicy field is set to Never, which means that the pod will not be restarted if it fails or is terminated.
 
 ## ConcurrencyPolicy
@@ -79,7 +77,7 @@ The concurrencyPolicy field specifies how the CronJob should handle concurrent e
 
 To create and run this CronJob on a Kubernetes cluster, we can use the kubectl command-line tool. For example:
 
-```
+```yaml
 kubectl apply -f my-cronjob.yaml
 ```
 
@@ -105,7 +103,7 @@ The cron syntax is a shorthand notation for specifying the schedule of a periodi
 
 ## Lets see an example of a cron syntax schedule:
 
-```
+```yaml
 */15 * * * *
 ```
 
