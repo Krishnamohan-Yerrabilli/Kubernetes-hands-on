@@ -13,6 +13,76 @@ exposure, feel free to fork, if this project helped you please leave a ⭐ <br>T
 
 # Kubernetes-hands-on
 
+## Prerequisites
+
+* Homebrew: <https://brew.sh/>
+
+```sh
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+* Docker: <https://docs.docker.com/docker-for-mac/install/>
+
+```sh
+open https://download.docker.com/mac/stable/Docker.dmg
+```
+
+* VirtualBox: <https://www.virtualbox.org/wiki/Downloads>
+
+* minikube: <https://github.com/kubernetes/minikube>
+
+Install minikube and the "ingress" and "metrics-server" addons:
+
+```sh
+$ brew install kubectl
+[...]
+
+$ brew cask install minikube
+[...]
+
+$ minikube start
+[...]
+🏄  Done! Thank you for using minikube!
+
+$ minikube addons enable ingress
+✅ ingress was successfully enabled
+
+$ minikube addons enable metrics-server
+✅  metrics-server was successfully enabled
+
+$ kubectl config current-context
+minikube
+```
+
+**Note:** the ingress addon is currently not supported on docker for Mac (see https://github.com/kubernetes/minikube/issues/7332).
+As a workaround, you have to deploy minikube as a VM and not as a container (using Virtualbox or Hyperkit for example)
+
+```sh
+$ minikube start --vm=true --vm-driver=virtualbox
+[...]
+✨  Using the virtualbox driver based on user configuration
+🔥  Creating virtualbox VM ...
+```
+
+If you did launch minikube already, the `--vm` flag may be ignored as minikube caches the previous config. If so you may want to delete and relaunch minikube (warning: it will delete your whole minikube setup)
+
+```sh
+$ minikube stop && minikube delete && minikube start --vm=true --vm-driver=virtualbox
+[...]
+💀  Removed all traces of the "minikube" cluster.
+✨  Using the virtualbox driver based on user configuration
+🔥  Creating virtualbox VM ...
+```
+### Completion
+
+If you are using Zsh, you can add the following to your `.zshrc` file to get autocomplete for `kubectl`:
+
+```sh
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi
+```
+
 ## What is Kubernetes?
 
 Kubernetes is an open-source platform "Orchestration engine" mainly used to manage
