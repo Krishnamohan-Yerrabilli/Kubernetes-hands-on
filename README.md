@@ -201,7 +201,7 @@ worker nodes are part of the Kubernetes cluster.
 
 <div align="center">
   <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
-    <img src="https://startkubernetes.com/static/771d7faf2ce188f54440c2ed984fa080/5a190/k8s-worker.png" alt="kuber" width="800" height="500">
+    <img src="https://user-images.githubusercontent.com/58173938/208222274-3253210c-6536-4801-9613-5e9a18432fae.jpg" alt="kuber" width="800" height="500">
   </a>
 </div>
 
@@ -215,6 +215,7 @@ that it talks to grpc (google remote procedure calls) over from the UNIX sockets
 then the info goes through the runtime CRI (container runtime interface) shim (docker) 
 and any other and then it creates pods as described in the pod spec, and it makes sure 
 the containers are in the running state.
+
 <br>
 
 <div align="center">
@@ -259,7 +260,7 @@ this you can check out my blog on Docker.
 
 <div align="center">
   <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
-    <img src="https://user-images.githubusercontent.com/58173938/197555335-c53a9357-1af8-4856-bfa7-f5d05ab66e35.png" alt="kuber" width="800" height="500">
+    <img src="https://user-images.githubusercontent.com/58173938/208224539-8c558160-802f-4a09-9a17-ca425860f8d6.png" alt="kuber">
   </a>
 </div>
 
@@ -309,7 +310,7 @@ also means they will share the same volumes, Cgroup limits, and even IPC names.
 
 <div align="center">
   <a href="https://github.com/Krishnamohan-Yerrabilli/Kubernetes-hands-on">
-    <img src="https://kubebyexample.com/sites/default/files/2021-06/pod-to-service.svg_.png" alt="kuber" width="800" height="500">
+    <img src="https://kubebyexample.com/sites/default/files/2021-06/pod-to-service.svg_.png" alt="kuber">
   </a>
 </div>
 
@@ -318,4 +319,3 @@ also means they will share the same volumes, Cgroup limits, and even IPC names.
 ## ❤ Show your support
 
 Give a ⭐️ if this project helped you, Happy learning!
-
