@@ -3,4 +3,4 @@ kind: Pod
 metadata:
   name: pod1
   labels:
-    environment: Development
+    environment: Development #(differ from environment)
