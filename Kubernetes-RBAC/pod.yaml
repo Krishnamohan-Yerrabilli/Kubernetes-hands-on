@@ -7,3 +7,4 @@ spec:
   - image: nginx
     name: marketing-api
   serviceAccountName: marketing-api
+ 
