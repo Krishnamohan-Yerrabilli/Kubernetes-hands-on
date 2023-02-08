@@ -315,6 +315,20 @@ also means they will share the same volumes, Cgroup limits, and even IPC names.
 
 <p>
 
+### Additional Resources
+
+[Kubernetes Interactive Tutorial](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
+
+[Katakoda Learn Kubernetes](https://katacoda.com/courses/kubernetes)
+
+[Configure a Pod to use Storage Volumes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-volume-storage/)
+
+[Observability - Honeycomb](https://www.honeycomb.io/kubernetes/)
+
+[Observability - OpenTelemetry](https://opentelemetry.io/)
+
+[Cloud Native Computing Foundation Landscape](https://landscape.cncf.io/)
+
 ## ❤ Show your support
 
 Give a ⭐️ if this project helped you, Happy learning!
