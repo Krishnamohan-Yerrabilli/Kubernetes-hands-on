@@ -3,7 +3,7 @@ Kubernetes-kubectl
 </div>
 
 # Giving Names 
-Jas 
+# as Kubernetes is Cluster
 ### What is it?
 
 The Kubernetes command-line interface, or CLI, is a tool that you can use to run commands against Kubernetes clusters. With the Kubernetes CLI, you can control and configure the various components of a Kubernetes system, such as deployments, services, and pods.
